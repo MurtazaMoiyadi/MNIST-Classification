@@ -21,11 +21,11 @@ def k_plot(X_train, y_train, X_test, y_test):
     plt.ylabel('Test Accuracy')
     plt.title('kNN Accuracy Analysis')
     test = []
-    image_num = [3000, 6000, 9000, 12000, 15000, 18000, 21000]
-    for num in image_num:
-        model = KNeighborsClassifier(n_neighbors=1).fit(X_train, y_train)
+    k_list = [x for x in range(1, 26 if x%2 == 1]
+    for k in k_list:
+        model = KNeighborsClassifier(n_neighbors=k).fit(X_train, y_train)
         test.append(metrics.accuracy_score(y_test, model.predict(X_test)))
-    plt.plot(image_num, test)
+    plt.plot(k_list, test)
     plt.show()
       
 #k_plot(X_train, y_train, X_test, y_test)
