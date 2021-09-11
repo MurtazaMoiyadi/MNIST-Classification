@@ -5,11 +5,14 @@
   - While obvious, the larger the training size the higher the test accuracy.
   - Curiously, the larger K is, the lower the test accuracy.
 
+
 *logisticregression.py* - implements multinomial logistic regression on the dataset via Sklearn.
   - Achieved a test accuracy of 0.8893.
 
+
 *PCA_decomp.py* - utilizes StandardScaler and PCA via and MatPlotLib to plot and determine the optimal number of principal components while maintaining a reasonable percentage of the explained variance. 
   - Based on the resulting Cumulative Explained Variance plot, I chose 200 as the number of principal components in my decomposition algorithm.
+
 
 *knn_PCA.py* - tests how varying the dimensions of the dataset and the training size affects training accuracy and performance of the KNN algorithm.
     - Having over 700 components takes almost 8x longer than the optimal number of 200.
